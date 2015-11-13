@@ -1,0 +1,10 @@
+set -e
+
+# replace this with your directory
+set PPT_DIFF_HOME=""
+
+if [ "$PPT_DIFF_HOME" = "" ]; then
+    echo "Please set the ppt diff directory in pptd"
+fi
+
+scala -cp "$PPT_DIFF_HOME/target" PPTDiff $@
